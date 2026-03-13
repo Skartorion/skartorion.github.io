@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HoodOS • Гибридная операционная система</title>
+    <meta
+      name="description"
+      content="HoodOS – гибридная операционная система на базе Debian 13 с собственным пакетным менеджером hpm, контейнеризацией через Podman и усиленной безопасностью."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="header-splash">
+          <img
+            src="media/hoodos-plymouth-splash.png"
+            alt=""
+            class="header-splash-image"
+          />
+        </div>
+        <nav class="nav">
+          <a href="#features" class="nav-link">Особенности</a>
+          <a href="#screenshots" class="nav-link">Скриншоты</a>
+          <a href="#stack" class="nav-link">Стек</a>
+          <a href="#about" class="nav-link">О проекте</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="section hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Debian 13 • hpm • Podman • усиленная безопасность</p>
+            <h1>Гибридная операционная система без компромисса между стабильностью и новизной.</h1>
+            <p class="lead">
+              HoodOS объединяет устойчивую пакетную базу Debian 13 и свежие инструменты из внешних
+              репозиториев. Система использует собственный менеджер пакетов hpm и контейнеризацию через
+              Podman, чтобы запускать рискованные приложения изолированно, не жертвуя надёжностью основного
+              окружения.
+            </p>
+            <div class="hero-actions">
+              <a
+                href="https://drive.google.com/uc?export=download&amp;id=16sUwLOO0Hw0hwD71aBhvVkX9TnULc65E"
+                class="btn primary"
+              >
+                Скачать образ
+              </a>
+              <a href="#about" class="btn ghost">Подробнее о HoodOS</a>
+            </div>
+            <ul class="hero-pills">
+              <li>Стабильная основа Debian 13</li>
+              <li>Изолированные контейнеры для рискованных пакетов</li>
+              <li>Гибридная модель обновлений</li>
+            </ul>
+          </div>
+
+          <div class="hero-preview">
+            <div class="glass-card hero-window">
+              <div class="window-header">
+                <span class="dot red"></span>
+                <span class="dot amber"></span>
+                <span class="dot green"></span>
+                <span class="window-title">htop — skartorion</span>
+              </div>
+              <div class="window-body">
+                <pre><code>$ neofetch
+OS: HoodOS (Debian 13 Trixie)
+Kernel: Linux
+Shell: zsh
+DE: GNOME 48
+Security: AppArmor, SELinux, LUKS
+
+hpm: Debian + Kali + ParrotOS + BlackArch</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>Ключевые идеи HoodOS</h2>
+            <p>
+              HoodOS — это экспериментальная гибридная операционная система, которая пытается совместить
+              стабильность классического Debian с актуальностью rolling‑дистрибутивов. Система решает
+              привычный выбор «стабильно или современно» с помощью собственного менеджера пакетов и
+              контейнеризации.
+            </p>
+          </header>
+          <div class="grid features-grid">
+            <article class="feature-card glass-card">
+              <h3>Гибридная модель обновлений</h3>
+              <p>
+                Базовые пакеты берутся из Debian 13 и проходят полный цикл проверки, а более свежие и
+                экспериметальные инструменты подключаются из дополнительных репозиториев через hpm. Так
+                система сохраняет предсказуемость ядра и базового окружения, но не отстаёт от современных
+                технологий.
+              </p>
+            </article>
+            <article class="feature-card glass-card">
+              <h3>Интеллектуальный менеджер пакетов hpm</h3>
+              <p>
+                hpm понимает, откуда берётся пакет: из официальной базы Debian или стороннего репозитория.
+                Безопасные пакеты ставятся прямо в систему, а потенциально конфликтные — в контейнеры на
+                основе Podman с прозрачной интеграцией в рабочее окружение.
+              </p>
+            </article>
+            <article class="feature-card glass-card">
+              <h3>Контейнеризация через Podman</h3>
+              <p>
+                Поддержка Podman позволяет запускать приложения в изолированных средах, сохраняя целостность
+                хост‑системы. Контейнеры используют отдельные наборы библиотек и конфигураций, а доступ к
+                ним организуется так, чтобы пользователь почти не замечал границы между контейнером и
+                основной ОС.
+              </p>
+            </article>
+            <article class="feature-card glass-card">
+              <h3>Многоуровневая безопасность</h3>
+              <p>
+                В HoodOS одновременно задействованы PolicyKit, AppArmor, SELinux и шифрование диска через
+                LUKS с возможностью использовать USB‑носитель как аппаратный ключ. Такой подход снижает
+                риски при работе со сторонним ПО и защищает данные даже при потере устройства.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screenshots / gallery -->
+      <section id="screenshots" class="section section-alt">
+        <div class="container">
+          <header class="section-header">
+            <h2>Графическая среда HoodOS</h2>
+            <p>
+              Ниже — места для скриншотов рабочего стола: GNOME 48 с подобранными расширениями, глобальными
+              темами GTK 3/4 и собственной пастельной цветовой палитрой.
+            </p>
+          </header>
+          <div class="grid gallery-grid">
+            <figure class="screenshot-card">
+              <div class="screenshot-placeholder gradient-1"></div>
+              <figcaption>GNOME 48: панель, лаунчер и область статуса HoodOS.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="screenshot-placeholder gradient-2"></div>
+              <figcaption>Рабочее место разработчика: редактор кода и терминал в удобной раскладке.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="screenshot-placeholder gradient-3"></div>
+              <figcaption>Инструменты безопасности и мониторинга в тематической цветовой палитре.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stack -->
+      <section id="stack" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>Что под капотом HoodOS</h2>
+            <p>
+              HoodOS строится вокруг идеи гибридной пакетной базы: стабильный Debian 13 как фундамент и
+              дополнительное ПО из Kali, ParrotOS и BlackArch, изолированное в контейнерах.
+            </p>
+          </header>
+          <div class="grid stack-grid">
+            <div class="stack-column">
+              <h3>Базовая система</h3>
+              <ul class="stack-list">
+                <li><span>База:</span> Debian 13 (Trixie) с крупной пакетной базой</li>
+                <li><span>Архитектура:</span> x86_64 с возможностью портирования на ARM и RISC‑V</li>
+                <li><span>Управление пакетами:</span> APT + собственный слой hpm</li>
+                <li><span>Удалённые репозитории:</span> Kali Linux, ParrotOS, BlackArch</li>
+              </ul>
+            </div>
+            <div class="stack-column">
+              <h3>Гибридное управление ПО</h3>
+              <ul class="stack-list">
+                <li><span>Менеджер пакетов:</span> hpm как обёртка над APT</li>
+                <li><span>Контейнеризация:</span> Podman для изоляции стороннего ПО</li>
+                <li><span>Интеграция:</span> прозрачные ярлыки и меню приложений для контейнеров</li>
+                <li><span>Зависимости:</span> разделение библиотек хоста и контейнеров</li>
+              </ul>
+            </div>
+            <div class="stack-column">
+              <h3>Графика и безопасность</h3>
+              <ul class="stack-list">
+                <li><span>Окружение рабочего стола:</span> GNOME 48 с подобранными расширениями</li>
+                <li><span>Темы:</span> глобальные темы GTK 3/4 в духе everforest</li>
+                <li><span>Безопасность:</span> PolicyKit, AppArmor, SELinux в режиме enforcing</li>
+                <li><span>Шифрование:</span> LUKS с поддержкой USB‑ключа для разблокировки диска</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About / footer CTA -->
+      <section id="about" class="section section-alt">
+        <div class="container about-grid">
+          <div>
+            <h2>О проекте HoodOS</h2>
+            <p>
+              HoodOS — учебно‑исследовательский проект по разработке гибридной операционной системы, в
+              которой сочетаются стабильность Debian и актуальные инструменты из мира информационной
+              безопасности и разработки.
+            </p>
+            <p>
+              Цель проекта — показать, как с помощью пакетной базы Debian 13, собственного менеджера пакетов
+              и контейнеризации можно построить систему, удобную и для повседневной работы, и для
+              экспериментов с современным ПО, не ломая при этом базовую ОС.
+            </p>
+          </div>
+          <div class="about-side">
+            <div class="glass-card note-card">
+              <h3>Ближайшие шаги развития</h3>
+              <ul>
+                <li>Добавить реальные скриншоты рабочего стола HoodOS.</li>
+                <li>Описать процесс установки через Calamares с примерами.</li>
+                <li>Расширить раздел о безопасности и планах по поддержке Secure Boot.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="muted">
+          &copy; <span id="year"></span> HoodOS. Сделано на Linux и свободном ПО.
+        </p>
+        <p class="muted small">
+          Эта страница вдохновлена общей компоновкой cachyos.org, но всё содержимое и оформление созданы
+          заново.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Keep the footer year up to date.
+      const yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
+    </script>
+  </body>
+</html>
+
