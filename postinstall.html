@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HoodOS • Постустановка</title>
+    <meta
+      name="description"
+      content="Постустановочная страница HoodOS: что сделать после установки системы и где найти сообщество."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="header-splash">
+          <img
+            src="media/hoodos-plymouth-splash.png"
+            alt=""
+            class="header-splash-image"
+          />
+        </div>
+        <nav class="nav">
+          <a href="index.html#features" class="nav-link">Особенности</a>
+          <a href="index.html#screenshots" class="nav-link">Скриншоты</a>
+          <a href="index.html#stack" class="nav-link">Стек</a>
+          <a href="index.html#about" class="nav-link">О проекте</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="section hero">
+        <div class="container">
+          <div class="hero-copy">
+            <p class="eyebrow">HoodOS установлена</p>
+            <h1>Спасибо, что выбрали HoodOS.</h1>
+            <p class="lead">
+              Если вы видите эту страницу, установка прошла успешно, загрузчик настроен, а система готова к
+              работе. Ниже — несколько шагов и ссылок, которые помогут комфортно начать пользоваться
+              дистрибутивом.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>Что сделать сразу после установки</h2>
+            <p>
+              Эти шаги не обязательны, но рекомендованы, чтобы система вела себя предсказуемо и была готова
+              к ежедневному использованию.
+            </p>
+          </header>
+          <div class="grid features-grid">
+            <article class="feature-card glass-card">
+              <h3>1. Обновить систему</h3>
+              <p>
+                Откройте терминал и выполните
+                <code>sudo hpm upgrade</code>
+                (или
+                <code>sudo apt update &amp;&amp; sudo apt full-upgrade</code>
+                ), чтобы убедиться, что все пакеты соответствуют текущему состоянию репозиториев.
+              </p>
+            </article>
+            <article class="feature-card glass-card">
+              <h3>2. Проверить драйверы и железо</h3>
+              <p>
+                Убедитесь, что корректно работают графика, звук и сеть. При необходимости установите
+                проприетарные драйверы или дополнительные микрокоды через
+                <code>hpm</code>
+                .
+              </p>
+            </article>
+            <article class="feature-card glass-card">
+              <h3>3. Настроить GNOME под себя</h3>
+              <p>
+                Воспользуйтесь предустановленными расширениями GNOME и темами, чтобы включить нужные панели,
+                горячие клавиши и внешний вид в стиле everforest.
+              </p>
+            </article>
+            <article class="feature-card glass-card">
+              <h3>4. Создать резервные копии</h3>
+              <p>
+                Настройте резервное копирование пользовательских данных и, по возможности, используйте
+                отдельный диск или удалённое хранилище для бэкапов.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <header class="section-header">
+            <h2>Сообщество и поддержка</h2>
+            <p>
+              Здесь могут появиться ссылки на форумы, чаты и документацию HoodOS. Пока что это заглушки,
+              которые можно заменить на реальные ресурсы по мере развития проекта.
+            </p>
+          </header>
+          <div class="grid stack-grid">
+            <div class="stack-column">
+              <h3>Форумы</h3>
+              <ul class="stack-list">
+                <li><span>Официальный форум:</span> <span>ссылка появится позже</span></li>
+                <li><span>Раздел помощи:</span> <span>ссылка появится позже</span></li>
+              </ul>
+            </div>
+            <div class="stack-column">
+              <h3>Чаты и соцсети</h3>
+              <ul class="stack-list">
+                <li><span>Matrix / Telegram:</span> <span>ссылка появится позже</span></li>
+                <li><span>IRC / Discord:</span> <span>ссылка появится позже</span></li>
+              </ul>
+            </div>
+            <div class="stack-column">
+              <h3>Документация</h3>
+              <ul class="stack-list">
+                <li><span>Руководство пользователя:</span> <span>ссылка появится позже</span></li>
+                <li><span>Руководство по hpm:</span> <span>ссылка появится позже</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container about-grid">
+          <div>
+            <h2>Если что-то пошло не так</h2>
+            <p>
+              Если после установки вы столкнулись с проблемами (не загружается графика, не работает сеть,
+              возникли ошибки при обновлении), постарайтесь сохранить вывод ошибок из терминала или журнала
+              системы и приложить его при обращении за поддержкой.
+            </p>
+            <p>
+              Типичные точки входа для диагностики: <code>journalctl</code>, логи загрузчика и вывод
+              установщика Calamares. Чем больше информации вы сможете собрать, тем проще будет воспроизвести
+              и исправить проблему.
+            </p>
+          </div>
+          <div class="about-side">
+            <div class="glass-card note-card">
+              <h3>Вернуться на главную</h3>
+              <ul>
+                <li>
+                  Открыть страницу проекта HoodOS:
+                  <a href="index.html">skartorion.github.io</a>
+                </li>
+                <li>Сравнить описанные возможности со своим установочным образом.</li>
+                <li>При необходимости скачать обновлённый ISO и переустановить систему.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="muted">
+          <span id="year"></span> HoodOS. Спасибо за установку нашей системы.
+        </p>
+        <p class="muted small">
+          Эта страница может использоваться как постустановочная: добавьте ссылку на неё в конфигурацию
+          браузера или приветственного приложения.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
+    </script>
+  </body>
+</html>
+
