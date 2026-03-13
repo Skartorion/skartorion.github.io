@@ -39,7 +39,7 @@
             <p class="lead">
               HoodOS объединяет устойчивую пакетную базу Debian 13 и свежие инструменты из внешних
               репозиториев. Система использует собственный менеджер пакетов hpm и контейнеризацию через
-              Podman, чтобы запускать рискованные приложения изолированно, не жертвуя надёжностью основного
+              Podman, чтобы запускать неподдерживаемые приложения изолированно, не жертвуя надёжностью основного
               окружения.
             </p>
             <div class="hero-actions">
@@ -53,8 +53,8 @@
             </div>
             <ul class="hero-pills">
               <li>Стабильная основа Debian 13</li>
-              <li>Изолированные контейнеры для рискованных пакетов</li>
-              <li>Гибридная модель обновлений</li>
+              <li>Изолированные контейнеры для непроверенных пакетов</li>
+              <li>Трёхслойная защита ОС</li>
             </ul>
           </div>
 
@@ -69,8 +69,8 @@
               <div class="window-body">
                 <pre><code>$ neofetch
 OS: HoodOS (Debian 13 Trixie)
-Kernel: Linux
-Shell: zsh
+Kernel: Linux 6.12.58 LTS
+Shell: bash
 DE: GNOME 48
 Security: AppArmor, SELinux, LUKS
 
@@ -139,13 +139,13 @@ hpm: Debian + Kali + ParrotOS + BlackArch</code></pre>
             <h2>Графическая среда HoodOS</h2>
             <p>
               Ниже — места для скриншотов рабочего стола: GNOME 48 с подобранными расширениями, глобальными
-              темами GTK 3/4 и собственной пастельной цветовой палитрой.
+              темами GTK 3/4 и тчательно выбранной пастельной цветовой палитрой.
             </p>
           </header>
           <div class="grid gallery-grid">
             <figure class="screenshot-card">
               <div class="screenshot-placeholder gradient-1"></div>
-              <figcaption>GNOME 48: панель, лаунчер и область статуса HoodOS.</figcaption>
+              <figcaption>GNOME 48: панель, док и область статуса HoodOS.</figcaption>
             </figure>
             <figure class="screenshot-card">
               <div class="screenshot-placeholder gradient-2"></div>
@@ -175,8 +175,8 @@ hpm: Debian + Kali + ParrotOS + BlackArch</code></pre>
               <ul class="stack-list">
                 <li><span>База:</span> Debian 13 (Trixie) с крупной пакетной базой</li>
                 <li><span>Архитектура:</span> x86_64 с возможностью портирования на ARM и RISC‑V</li>
-                <li><span>Управление пакетами:</span> APT + собственный слой hpm</li>
-                <li><span>Удалённые репозитории:</span> Kali Linux, ParrotOS, BlackArch</li>
+                <li><span>Управление пакетами:</span> Hpm + fallback Apt</li>
+                <li><span>Внешние репозитории:</span> Kali Linux, ParrotOS, BlackArch</li>
               </ul>
             </div>
             <div class="stack-column">
@@ -234,11 +234,10 @@ hpm: Debian + Kali + ParrotOS + BlackArch</code></pre>
     <footer class="site-footer">
       <div class="container footer-inner">
         <p class="muted">
-          &copy; <span id="year"></span> HoodOS. Сделано на Linux и свободном ПО.
+          <span id="year"></span> HoodOS. Сделано на Linux и свободном ПО.
         </p>
         <p class="muted small">
-          Эта страница вдохновлена общей компоновкой cachyos.org, но всё содержимое и оформление созданы
-          заново.
+          Эта страница вдохновлена общей компоновкой cachyos.org
         </p>
       </div>
     </footer>
